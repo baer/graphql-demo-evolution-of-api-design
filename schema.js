@@ -1,12 +1,12 @@
-const graphql = require("graphql");
-const data = require("./data.js");
+const {
+  GraphQLInt,
+  GraphQLList,
+  GraphQLObjectType,
+  GraphQLSchema,
+  GraphQLString
+} = require("graphql");
 
-const GraphQLBoolean = graphql.GraphQLBoolean;
-const GraphQLString = graphql.GraphQLString;
-const GraphQLInt = graphql.GraphQLInt;
-const GraphQLObjectType = graphql.GraphQLObjectType;
-const GraphQLNonNull = graphql.GraphQLNonNull;
-const GraphQLList = graphql.GraphQLList;
+const data = require("./data.js");
 
 const Author = new GraphQLObjectType({
   name: "Author",
@@ -46,6 +46,6 @@ const Blog = new GraphQLObjectType({
   }
 });
 
-module.exports = new graphql.GraphQLSchema({
+module.exports = new GraphQLSchema({
   query: Blog
 });
