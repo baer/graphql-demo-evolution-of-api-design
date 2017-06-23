@@ -5,7 +5,7 @@ const schema = require("./schema.js");
 const app = require("express")();
 const PORT = 5000;
 
-app.use(cors({ origin: '*' }));
+app.use(cors());
 
 app.use(graphqlHttp({
   schema,
