@@ -1,4 +1,4 @@
-var cors = require('cors')
+const cors = require('cors');
 const graphqlHttp = require("express-graphql");
 const schema = require("./schema.js");
 
